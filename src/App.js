@@ -4,6 +4,7 @@ import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { Home } from './Home';
 import { Notfound } from './Notfound'
 import { Phone } from './Phone';
+import { API } from './global'
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function Phonelist() {
   const [mobiles, setMobiles] = useState([]);
 
   const getMobiles = () => {
-    fetch('http://localhost:4000/mobiles', {
+    fetch(`${API}/mobiles`, {
       method: 'GET',
       headers: {
         "x-auth-token": localStorage.getItem("token")
