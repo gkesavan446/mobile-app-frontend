@@ -4,6 +4,7 @@ import { useFormik } from 'formik';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
+import { API } from './global'
 
 export function Loginform() {
 
@@ -20,7 +21,7 @@ export function Loginform() {
         onSubmit: async (values) => {
             console.log("Formik values:", values);
 
-            const data = await fetch('http://localhost:4000/login', {
+            const data = await fetch(`${API}/login`, {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: { "Content-type": "application/json" },
