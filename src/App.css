@@ -1,38 +1,72 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+.phone-picture {
+  height: 400px;
+  width: 450px;
+  object-fit: contain;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.phone-container {
+  background-color: white;
+  width: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgb(0 0 0 / 24%) 1px 2px 13px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.phone-name {
+  padding: 16px;
+  font-size: 48px;
+  margin-bottom: 0px;
+  margin-left: 20%;
+  /* font-weight: bold; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.phone-company {
+  /* padding: 16px; */
+  font-size: 32px;
+  color: grey;
+  /* font-weight: bold; */
+  margin-top: 0px;
+  margin-left: 40%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: Roboto;
+  margin: 10px;
+}
+
+.phone-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 14px;
+}
+
+.login-form-container{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+
+
+.not-found {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  place-content: center;
+  gap: 2rem
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
